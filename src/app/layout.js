@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CounterProvider } from "@/components/CounterContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +26,9 @@ export default function RootLayout({ children }) {
             <strong>Moja Aplikacja Szkolna</strong>
           </nav>
         </header>
-        {children}
+        <CounterProvider>
+          {children}
+        </CounterProvider>
       </body>
     </html>
   );
