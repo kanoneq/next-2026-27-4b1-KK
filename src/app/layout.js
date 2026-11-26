@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
         <CounterProvider>
           {children}
         </CounterProvider>
+        <span className="highlight">Ważna informacja</span>
       </body>
     </html>
   );
